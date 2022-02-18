@@ -9,4 +9,9 @@
     <string name="player1">Player 1</string>
     <string name="player2">Player 2</string>
     <string name="start">start</string>
+    <string name="equality">Equality</string>
+    <string name="menu">Menu</string>
+    <string name="rejouer">Rejouer</string>
+    <string name="base_score">0</string>
+    <string name="base_name">Name</string>
 </resources>
