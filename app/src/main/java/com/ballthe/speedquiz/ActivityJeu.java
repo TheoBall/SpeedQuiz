@@ -12,47 +12,49 @@ import java.util.ArrayList;
 
 public class ActivityJeu extends AppCompatActivity {
 
-    private TextView TV_nomJoueur1;
-    private TextView TV_nomJoueur2;
-    private Button BT_menu;
-    private Button BT_rejouer;
-    private TextView TV_Phrase1;
-    private TextView TV_Phrase2;
+    private TextView TV_NomJ1;
+    private TextView TV_NomJ2;
+    private Button BT_Menu;
+    private Button BT_Rejouer;
+    private TextView TV_Question1;
+    private TextView TV_Question2;
+    private Button BT_J1;
+    private Button BT_J2;
     private ArrayList<String> ListeQuestion = new ArrayList<>();
-    private Button BT_Joueur1;
-    private Button BT_Joueur2;
 
-    private void getId(){
-        TV_nomJoueur1 = findViewById(R.id.nomJoueur1);
-        TV_nomJoueur2 = findViewById(R.id.nomJoueur2);
-        BT_menu = findViewById(R.id.buttonMenu);
-        BT_rejouer = findViewById(R.id.buttonRejouer);
-        TV_Phrase1 = findViewById(R.id.gagnantJoueur1);
-        TV_Phrase2 = findViewById(R.id.gagnantJoueur2);
-        BT_Joueur1 = findViewById(R.id.boutonJ1);
-        BT_Joueur2 = findViewById(R.id.boutonJ2);
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jeu);
 
-        getId();
+        TV_NomJ1 = findViewById(R.id.nomJoueur1);
+        TV_NomJ2 = findViewById(R.id.nomJoueur2);
+        BT_Menu = findViewById(R.id.buttonMenu);
+        BT_Rejouer = findViewById(R.id.buttonRejouer);
+        TV_Question1 = findViewById(R.id.gagnantJoueur1);
+        TV_Question2 = findViewById(R.id.gagnantJoueur2);
+        BT_J1 = findViewById(R.id.boutonJ1);
+        BT_J2 = findViewById(R.id.boutonJ2);
 
         Intent GameActivity = getIntent();
         String Joueur1 = GameActivity.getStringExtra("Joueur1");
         String Joueur2 = GameActivity.getStringExtra("Joueur2");
 
-        TV_nomJoueur1.setText(Joueur1);
-        TV_nomJoueur2.setText(Joueur2);
+        TV_NomJ1.setText(Joueur1);
+        TV_NomJ2.setText(Joueur2);
 
-        BT_menu.setVisibility(View.INVISIBLE);
-        BT_rejouer.setVisibility(View.INVISIBLE);
+        BT_Menu.setVisibility(View.INVISIBLE);
+        BT_Rejouer.setVisibility(View.INVISIBLE);
 
         ListeQuestion.add("Les poules ont des dents");
         ListeQuestion.add("Elden Ring sera le jeu de l'année 2022");
+        ListeQuestion.add("Sett est le personnage le plus stylé de LoL");
+        ListeQuestion.add("Squid Game est inspiré du jeu Roblox Squid Game mode");
+        ListeQuestion.add("Le FORTNITE BATTLE PASS coûte 850 V-bucks");
+        ListeQuestion.add("Super Smash Bros Ultimate Ninja Storm 4 Tropical Freeze & Knuckles");
+        ListeQuestion.add("Amoguste est l'impostor");
+        ListeQuestion.add("Louis déteste les avions");
 
     }
 
