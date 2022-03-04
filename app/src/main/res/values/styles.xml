@@ -32,7 +32,4 @@
     <style name="widget.Quiz.TextInputLayer.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/textColorPrimary</item>
     </style>
-
-
-
 </resources>

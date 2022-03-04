@@ -9,128 +9,112 @@
     tools:ignore="MissingDefaultResource">
 
     <Button
-        style="@style/widget.Quiz.TextInputLayer.Button"
         android:id="@+id/boutonJ1"
+        style="@style/widget.Quiz.TextInputLayer.Button"
         android:layout_width="@dimen/game_button_width"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/questionJoueur1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintVertical_bias="0.15"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        style="@style/widget.Quiz.TextInputLayer.Button"
         android:id="@+id/boutonJ2"
+        style="@style/widget.Quiz.TextInputLayer.Button"
         android:layout_width="@dimen/game_button_width"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintVertical_bias="0.85"/>
+        app:layout_constraintTop_toTopOf="@+id/questionJoueur2" />
 
     <TextView
         android:id="@+id/nomJoueur1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/base_name"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/boutonJ2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintVertical_bias="0.05"/>
+        app:layout_constraintTop_toBottomOf="@+id/ScoreJ2" />
 
     <TextView
         android:id="@+id/nomJoueur2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:rotation="180"
         android:text="@string/base_name"
+        app:layout_constraintBottom_toTopOf="@+id/ScoreJ1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintVertical_bias="0.95"
-        android:rotation="180"/>
+        app:layout_constraintStart_toEndOf="@+id/boutonJ1" />
 
     <TextView
-        android:id="@+id/gagnantJoueur1"
+        android:id="@+id/questionJoueur1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/equality"
+        android:rotation="180"
+        android:text="@string/get_started"
+        app:layout_constraintBottom_toBottomOf="@+id/boutonRejouer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintVertical_bias="0.30"
-        android:rotation="180"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/gagnantJoueur2"
+        android:id="@+id/questionJoueur2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/equality"
+        android:text="@string/get_started"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintVertical_bias="0.70"/>
+        app:layout_constraintTop_toTopOf="@+id/boutonMenu" />
 
     <Button
+        android:id="@+id/boutonMenu"
         style="@style/widget.Quiz.TextInputLayer.Button"
-        android:id="@+id/buttonMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="252dp"
         android:text="@string/menu"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintVertical_bias="0.50"/>
+        app:layout_constraintVertical_bias="0.498" />
+
     <Button
+        android:id="@+id/boutonRejouer"
         style="@style/widget.Quiz.TextInputLayer.Button"
-        android:id="@+id/buttonRejouer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="236dp"
         android:text="@string/rejouer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
-        app:layout_constraintVertical_bias="0.50"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
     <TextView
-        android:id="@+id/ScoreJoueur1"
+        android:id="@+id/ScoreJ2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/base_score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintVertical_bias="0.50"
-        android:textSize="150sp"/>
-    <TextView
-        android:id="@+id/ScoreJoueur2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/base_score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintVertical_bias="0.50"
         android:textSize="150sp"
-        android:rotation="180"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/boutonMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ScoreJ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        android:text="@string/base_score"
+        android:textSize="150sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boutonRejouer"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
